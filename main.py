@@ -496,7 +496,7 @@ def delete_comment(comment_id):
 
 # --- RUTA PARA SERVIR IMÁGENES ---
 @app.route('/uploads/<filename>')
-def uploaded_file(filename):
+def get_uploaded_file(filename):
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 # -------------------
