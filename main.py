@@ -16,7 +16,8 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 ALLOWED_EXTENSIONS = {"png", "jpg", "jpeg", "gif"}
 
 app = Flask(__name__)
-CORS(app)
+#CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 Swagger(app)
 
 # --- INICIO DE LA CONFIGURACIÓN DE BASE DE DATOS HÍBRIDA ---
