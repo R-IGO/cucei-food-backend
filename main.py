@@ -494,6 +494,10 @@ def delete_comment(comment_id):
     finally:
         session_db.close()
 
+# --- RUTA PARA SERVIR IMÁGENES ---
+@app.route('/uploads/<filename>')
+def uploaded_file(filename):
+    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 # -------------------
 # RUN SERVER
