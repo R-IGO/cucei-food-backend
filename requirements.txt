@@ -2,4 +2,5 @@ Flask
 flask-cors
 flask_sqlalchemy
 psycopg2-binary
-flasgger
+flask-restx
+werkzeug
